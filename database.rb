@@ -8,7 +8,7 @@ class Datum
 
   property :id, Serial
   property :body, Text
-  property :created_at, DateTime, :default => ->() { Time.now }
+  property :created_at, DateTime, :default => ->(r, p) { Time.now }
 end
 
 DataMapper.finalize
