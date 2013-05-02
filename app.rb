@@ -26,7 +26,7 @@ class OpenData::API < Grape::API
 
   resource :datum do
     desc "Post a new datum; param is `body`."
-    post :new, :requirements => { :body => /[ -~]+/ } do
+    post :new do #, :requirements => { :body => /[ -~]+/ } do
       d = Datum.create :body => params[:body]
       d.save!
     end
