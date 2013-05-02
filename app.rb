@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'grape'
+require 'json'
 require './database.rb'
 
 class OpenData; end
