@@ -77,6 +77,8 @@ GEM
     rack (1.5.2)
     rack-accept (0.4.5)
       rack (>= 0.4)
+    rack-attack (2.1.0)
+      rack
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-protection (1.5.0)
@@ -100,4 +102,5 @@ DEPENDENCIES
   dm-postgres-adapter
   grape
   json
+  rack-attack
   sinatra
