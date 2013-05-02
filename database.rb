@@ -1,7 +1,7 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
 
-DataMapper.setup :default, ENV['HEROKU_POSTGRESQL_--COLOR--_URL']
+DataMapper.setup :default, ENV['HEROKU_POSTGRESQL_COPPER_URL']
 
 class Datum
   include DataMapper::Resource
