@@ -33,6 +33,6 @@ end
 
 class OpenData::Web < Sinatra::Base
   get '/' do
-    OpenData::API.routes
+    OpenData::API.routes.to_json
   end
 end
