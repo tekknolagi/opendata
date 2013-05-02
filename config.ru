@@ -1,3 +1,3 @@
 require './app.rb'
 
-run OpenData::API
+run Rack::Cascade.new [OpenData::API, OpenData::Web]

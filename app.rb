@@ -1,8 +1,6 @@
-#require 'sinatra'
+require 'sinatra'
 require 'grape'
 require './database.rb'
-
-# heroku addons:add heroku-postgresql
 
 class OpenData; end
 
@@ -10,10 +8,6 @@ class OpenData::API < Grape::API
   format :json
   
   resource :feed do
-    desc "Explain what this is all about."
-    get '/' do
-      self.routes
-    end
 
     desc "Get the last posted datum."
     get :last do
@@ -37,3 +31,8 @@ class OpenData::API < Grape::API
   end
 end
 
+class OpenData::Web < Sinatra::Base
+  get '/' do
+    OpenData::API.routes
+  end
+end
