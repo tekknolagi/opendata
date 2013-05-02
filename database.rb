@@ -7,8 +7,8 @@ class Datum
   include DataMapper::Resource
 
   property :id, Serial
-  property :body, Text, :required => true
-  property :created_at, DateTime, :required => true, :default => ->() { Time.now }
+  property :body, Text
+  property :created_at, DateTime, :default => ->() { Time.now }
 end
 
 DataMapper.finalize
