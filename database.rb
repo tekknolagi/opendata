@@ -1,7 +1,11 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
 
-DataMapper.setup :default, ENV['HEROKU_POSTGRESQL_COPPER_URL']
+if ENV['MODE'] == 'travis'
+  DataMapper.setup :default, 'postgresql://postgres@127.0.0.1/opendata'
+else
+  DataMapper.setup :default, ENV['HEROKU_POSTGRESQL_COPPER_URL']
+end
 
 class Datum
   include DataMapper::Resource
