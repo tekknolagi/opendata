@@ -1,3 +1,5 @@
+require 'timeout'
+
 task :default => [:travis]
 
 task :travis do
