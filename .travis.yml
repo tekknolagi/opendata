@@ -3,6 +3,6 @@ rvm:
   - 1.9.3
   - 2.0.0
 before_script:
-  - psql -c 'create database opentext;' -U postgres
+  - psql -c 'create database opendata;' -U postgres
 env:
   - MODE=travis
