@@ -1,5 +1,5 @@
 task :default => [:travis]
 
-task :test do
+task :travis do
   `rackup config.ru`
 end
